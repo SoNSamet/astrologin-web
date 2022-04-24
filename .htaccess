@@ -1,0 +1,24 @@
+#php_value display_errors 1
+#php_value display_startup_errors 1
+#php_value max_execution_time 30
+#php_value max_input_vars 1000
+#php_value post_max_size 20M
+
+RewriteEngine on
+
+
+#Seo url oluşturma
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteRule ^anasayfa? index.php [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
+
+#Dinamik sayfalar için  0-9 ve a-z arasındaki karakterler için ([0-9a-zA-Z-_]+) bu yapıyı ve id=1 icin  0-9 arası rakamlardan oluşan karakterler seçilmeli ([0-9]+) bu şekilde oluşturup hizmetlerimiz.php?id= sayfasını çağırmalıyız.
+
+RewriteRule ^hizmetlerimiz/([0-9a-zA-Z-_]+)? hizmet.php?hizmet=$1 [L,QSA]
+

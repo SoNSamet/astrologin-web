@@ -1,0 +1,40 @@
+.beyaz{
+  color: white;
+}
+.cizgi-kaldir{
+  text-decoration:none;
+}
+
+.nokta-kaldir{
+  list-style-type:none;
+}
+
+.foot-icon-size{
+  font-size: .8rem;
+}
+ 
+.medium-yazi{
+  font-size: medium;
+}
+.small-yazi{
+  font-size: small;
+}
+.smaller-yazi{
+  font-size: smaller;
+}
+.large-yazi{
+  font-size: large;
+}
+.larger-yazi{
+  font-size: larger;
+}
+.posizyon-absolute{
+  position: absolute;
+}
+.nav-item{
+  border-bottom: 2px solid #F8F9FA;
+}
+.nav-item:hover{
+  border-bottom: 2px solid #6EB33C;
+  transition:all .1s ease ;
+}
